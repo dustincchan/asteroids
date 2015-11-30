@@ -1,17 +1,14 @@
 (function () {
-  if (typeof window.Asteroids === "undefined" ) {
-    window.Asteroids = {};
+  if (typeof window.Asteroids.Util === "undefined" ) {
+    window.Asteroids.Util = {};
   }
+
   var Asteroids = window.Asteroids;
 
-  Function.prototype.inherits = function (ParentClass) {
-    function Surrogate () {}
-    Surrogate.prototype = ParentClass.prototype;
-    this.prototype = new Surrogate();
-    this.prototype.constructor = this;
-  };
-
-  Asteroids.Util.inherits = function (ChildClass, ParentClass) {
-    ChildClass.inherits(ParentClass);
+  Asteroids.Util.inherits = function (childClass, parentClass) {
+    function Surrogate() {}
+    Surrogate.prototype = parentClass.prototype;
+    childClass.prototype = new Surrogate();
+    childClass.prototype.constructor = childClass;
   };
 })();
