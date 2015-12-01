@@ -8,7 +8,7 @@
     this.pos = pos;
     this.color = "#66ff66";
     this.radius = 30;
-    this.vel = [1,1];
+    this.vel = Asteroids.Util.randomVec(2);
     // Asteroids.MovingObject.call(this, pos, color, radius);
 
   };

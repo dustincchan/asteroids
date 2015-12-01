@@ -12,4 +12,10 @@
     childClass.prototype = new Surrogate();
     childClass.prototype.constructor = childClass;
   };
+
+  Asteroids.Util.randomVec = function (length) {
+    var x = Math.random() * length - (length / 2);
+    var y = Math.random() * length - (length / 2);
+    return [x, y];
+  };
 })();

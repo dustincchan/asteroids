@@ -26,6 +26,7 @@
   };
 
   Game.prototype.moveObjects = function () {
+    console.log("moved");
     this.asteroids.forEach(function(asteroid){
       asteroid.move();
     });
