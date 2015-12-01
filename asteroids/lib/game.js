@@ -21,7 +21,7 @@
 
   Game.prototype.addAsteroids = function() {
     for(var i = 0; i < this.NUM_ASTEROIDS; i++) {
-      this.asteroids.push(new Asteroids.Asteroid({ pos: this.randomPos() }));
+      this.asteroids.push(new Asteroids.Asteroid(this.randomPos()));
     }
   };
 
@@ -34,7 +34,7 @@
   Game.prototype.draw = function(ctx) {
     ctx.clearRect(0, 0, this.DIM_X, this.DIM_Y);
     this.asteroids.forEach(function(asteroid) {
-      asteroid.draw();
+      asteroid.draw(ctx);
     });
   };
 })();

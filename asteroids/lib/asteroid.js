@@ -8,7 +8,10 @@
     this.pos = pos;
     this.color = "#66ff66";
     this.radius = 30;
+    this.vel = [1,1];
+    // Asteroids.MovingObject.call(this, pos, color, radius);
+
   };
 
-  Asteroids.Util.inherits(Asteroids, Asteroids.MovingObject);
+  Asteroids.Util.inherits(Asteroid, Asteroids.MovingObject);
 })();

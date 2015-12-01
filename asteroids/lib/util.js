@@ -1,9 +1,10 @@
 (function () {
-  if (typeof window.Asteroids.Util === "undefined" ) {
-    window.Asteroids.Util = {};
+  if (typeof window.Asteroids === "undefined" ) {
+    window.Asteroids = {};
   }
 
   var Asteroids = window.Asteroids;
+  var Util = Asteroids.Util = {};
 
   Asteroids.Util.inherits = function (childClass, parentClass) {
     function Surrogate() {}
